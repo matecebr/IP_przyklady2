@@ -27,10 +27,10 @@ public abstract class Posilek {
         {
             StringBuilder sb = new StringBuilder();
             
-            sb.append("Posilek: ").append(this.getNazwa()).append(", czyli: ");
+            sb.append("Posiłek: ").append(this.getNazwa()).append(", czyli: ");
             for (String skladnik : this.getSklad())
             {
-                sb.append(" + ").append(skladnik).append(" ");
+                sb.append("+").append(skladnik).append(" ");
             }
             return sb.toString();
         }
