@@ -1,4 +1,4 @@
-package zajadalnia;
+package kucharka;
 
 import java.util.ArrayList;
 import java.util.LinkedList;

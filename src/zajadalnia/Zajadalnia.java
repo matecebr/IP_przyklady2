@@ -5,6 +5,7 @@
  */
 package zajadalnia;
 
+import kucharka.Kucharka;
 import java.util.Collection;
 import java.util.List;
 import java.util.Scanner;
