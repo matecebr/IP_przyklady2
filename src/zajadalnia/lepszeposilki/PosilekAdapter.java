@@ -12,18 +12,18 @@ import java.util.LinkedList;
  * @author jfk
  */
 public class PosilekAdapter extends zajadalnia.posilki.Posilek {
-    // ... ?
+    LepszyPosilek lp;
     
     public PosilekAdapter(LepszyPosilek lp)
     {
         super(lp.getNazwa());
-        //....?
+        this.lp = lp;
     }
 
     // metoda abstrakcyjna musi zostać nadpisana
     @Override
     public LinkedList<String> getSklad() {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        return lp.getType(LepszyPosilek.rodzaj.skladnik);
     }
 
     // jeżeli trzeba, to do nadpisania

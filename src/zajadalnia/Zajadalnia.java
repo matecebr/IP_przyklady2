@@ -5,17 +5,31 @@
  */
 package zajadalnia;
 
+import java.util.ArrayList;
 import kucharka.Kucharka;
 import java.util.Collection;
+import java.util.LinkedList;
 import java.util.List;
 import java.util.Scanner;
-
+import kucharka.IKucharka;
+import kucharka.LepszaKucharka;
+import przepisy.Przepisy;
+import zajadalnia.posilki.Kotlet;
+import zajadalnia.posilki.Placek;
+import zajadalnia.posilki.Posilek;
+import zajadalnia.FabrykaMenu;
 /**
  *
  * @author jfk
  */
 public class Zajadalnia {
 
+    static public Przepisy przygotujJadlospis()
+    {
+        FabrykaMenu fm = new FabrykaMenu();
+        return fm.dajMenu("jarskie");
+    }
+    
     /**
      * @param args the command line arguments
      */
@@ -23,9 +37,11 @@ public class Zajadalnia {
         
         Klient kl = new Klient("Leon");
         
-        Kucharka kucharka = new Kucharka();
+        IKucharka kucharka = new LepszaKucharka(Zajadalnia.przygotujJadlospis());
         List<String> menu = kucharka.getMenu();
         Scanner scanner = new Scanner(System.in);
+        
+        
         
         
         // zamawianie
@@ -68,4 +84,20 @@ public class Zajadalnia {
         
     }
     
+
+    private static class Kompot extends Posilek {
+
+        public Kompot() {
+            super("kompot");
+        }
+
+        @Override
+        public LinkedList<String> getSklad() {
+            LinkedList<String> ret = new LinkedList<String>();
+            ret.add("woda");
+            ret.add("truskawki");
+            ret.add("cukier");
+            return ret;
+        }
+    }
 }

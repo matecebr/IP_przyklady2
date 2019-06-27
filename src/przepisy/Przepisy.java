@@ -16,11 +16,11 @@ import zajadalnia.posilki.Posilek;
  * @author jfk
  */
 public class Przepisy implements IPrzepisy {
-    private HashMap<String, Posilek> lista;
+    private HashMap<String, Posilek> lista = new HashMap<String, Posilek>();
     
     public void Przepisy()
     {
-        lista = new HashMap<String, Posilek>();
+        
     }
     
     @Override

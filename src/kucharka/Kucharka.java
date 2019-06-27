@@ -10,7 +10,7 @@ import zajadalnia.posilki.Posilek;
  *
  * @author jfk
  */
-public class Kucharka {
+public class Kucharka implements IKucharka {
     public Posilek gotuj(String nazwa)
     {
         switch (nazwa)
