@@ -23,7 +23,9 @@ public class PosilekAdapter extends zajadalnia.posilki.Posilek {
     // metoda abstrakcyjna musi zostać nadpisana
     @Override
     public LinkedList<String> getSklad() {
-        return lp.getType(LepszyPosilek.rodzaj.skladnik);
+        //return lp.getType(LepszyPosilek.rodzaj.skladnik);
+                throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+
     }
 
     // jeżeli trzeba, to do nadpisania
